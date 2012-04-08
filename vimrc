@@ -37,4 +37,5 @@ let g:moria_contrast = 'high'
 let moria_style = 'dark' 
 colo moria
 
-
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
