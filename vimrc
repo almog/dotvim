@@ -31,11 +31,7 @@ set autoindent
 set expandtab
 
 ""Color Scheme
-let g:moria_termcolors = 256
-let g:moria_visibility = 'high'
-let g:moria_contrast = 'high'
-let moria_style = 'dark' 
-colo moria
+colo vividchalk
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>

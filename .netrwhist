@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/almog/proj/merchant_portal/features'
-let g:netrw_dirhist_2='/Users/almog/proj/merchant_portal/features/support'
-let g:netrw_dirhist_3='/Users/almog/proj/okapi/features'
-let g:netrw_dirhist_4='/Users/almog/proj/okapi/features/step_definitions'
-let g:netrw_dirhist_5='/Users/almog/proj/okapi/features'
-let g:netrw_dirhist_6='/Users/almog/proj/okapi/features/support'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/almog/proj/kbr/spec/lib/klarna-backoffice'
