@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/almog'
-let g:netrw_dirhist_2='/Users/almog/proj/remote-capybara-cucumber-example/features'
-let g:netrw_dirhist_3='/Users/almog/.rvm/gems/ruby-1.9.3-p0/gems/capybara-1.1.2'
-let g:netrw_dirhist_4='/System/Library/StartupItems'
-let g:netrw_dirhist_5='/Users/almog/.rvm/gems/ruby-1.9.3-p0/gems/handlebars_assets-0.6.2'
-let g:netrw_dirhist_6='/Users/almog/.rvm/gems/ruby-1.9.3-p0/gems/copycopter_client-2.0.0'
-let g:netrw_dirhist_7='/Users/almog/.rvm/gems/ruby-1.9.3-p0/bundler/gems/copycopter-ruby-client-9c6a0e9e0235'
-let g:netrw_dirhist_8='/Users/almog/proj/merp/lib/tasks'
-let g:netrw_dirhist_9='/Users/almog/proj/okapi/lib/kred'
+let g:netrw_dirhist_cnt =0
