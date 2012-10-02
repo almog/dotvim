@@ -1,3 +1,4 @@
+set shell=zsh\ -i
 "" Pathogen
 call pathogen#infect()
 call pathogen#helptags()
@@ -6,8 +7,8 @@ call pathogen#helptags()
 "syntax enable
 set encoding=utf-8
 set fileencoding=utf-8
-"set showcmd                     " display incomplete commands
-"filetype plugin indent on       " load file type plugins + indentation
+filetype plugin indent on       " load file type plugins + indentation
+
 
 set clipboard=unnamed
 
