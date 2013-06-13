@@ -46,4 +46,20 @@ let g:ctrlp_custom_ignore = {
   \ 'compiled assets': '\public$',
   \ }
 
+""Highlight ruby files that don't end with .rb
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
+
 "let mapleader = ","
+
+"No arrow keys
+vnoremap <Up> <NOP>
+inoremap <Up> <NOP>
+vnoremap <Down> <NOP>
+inoremap <Down> <NOP>
+vnoremap <Left> <NOP>
+inoremap <Left> <NOP>
+vnoremap <Right> <NOP>
+inoremap <Right> <NOP>
+"Enable j/k movements when using <CR>-N completions
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
