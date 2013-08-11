@@ -1,7 +1,18 @@
 set shell=zsh\ -i
-"" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+
+"" vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 
 "set nocompatible                " choose no compatibility with legacy vi
 "syntax enable
