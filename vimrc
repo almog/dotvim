@@ -13,6 +13,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'thoughtbot/vim-rspec'
 
 "set nocompatible                " choose no compatibility with legacy vi
 "syntax enable
@@ -61,6 +62,11 @@ let g:ctrlp_custom_ignore = {
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 "let mapleader = ","
+"" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 "No arrow keys
 vnoremap <Up> <NOP>
