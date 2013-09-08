@@ -1,4 +1,6 @@
-set shell=zsh\ -i
+if executable('/bin/zsh')
+  set shell=/bin/zsh
+endif
 
 "" vundle
 set rtp+=~/.vim/bundle/vundle/
