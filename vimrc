@@ -82,3 +82,5 @@ inoremap <Right> <NOP>
 "Enable j/k movements when using <CR>-N completions
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
+let mapleader = ","
