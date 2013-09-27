@@ -84,3 +84,4 @@ inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 let mapleader = ","
+set re=1
