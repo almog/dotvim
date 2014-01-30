@@ -16,6 +16,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'altercation/vim-colors-solarized'
 
 "set nocompatible                " choose no compatibility with legacy vi
 "syntax enable
@@ -46,7 +47,8 @@ set autoindent
 set expandtab
 
 ""Color Scheme
-colo vividchalk
+colorscheme solarized
+set background=dark
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
