@@ -3,20 +3,22 @@ if executable('/bin/zsh')
 endif
 
 "" vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
 
 "set nocompatible                " choose no compatibility with legacy vi
 "syntax enable
