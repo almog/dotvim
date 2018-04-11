@@ -17,6 +17,13 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'elzr/vim-json'
+Plugin 'godlygeek/tabular'
+Plugin 'isRuslan/vim-es6'
+Plugin 'sbdchd/neoformat'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -52,17 +59,23 @@ set expandtab
 colorscheme solarized
 set background=dark
 
+" Save temp files to ~/tmp
+set dir=~/tmp	
+
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-set wildignore+=tmp\*,*.swp,*.zip,*.exe   " Windows
+let g:ctrlp_max_files=0
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/webpack/*,*/vendor/*     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|\webpack$\vendor$\public$',
+  \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
-  \ 'compiled assets': '\public$',
   \ }
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 
 ""Highlight ruby files that don't end with .rb
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
@@ -87,5 +100,48 @@ inoremap <Right> <NOP>
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
+vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
+
+nmap ,n :NERDTreeFind<CR>
+
 let mapleader = ","
 set re=1
+set foldmethod=expr
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
+
+"autocmd BufWritePre *.js Neoformat
+"autocmd BufWritePre *.es6 Neoformat
+"autocmd BufWritePre *.jsx Neoformat
+
+"mark syntax errors with :signs
+"let g:syntastic_enable_signs=1
+""automatically jump to the error when saving the file
+"let g:syntastic_auto_jump=0
+"show the error list automatically
+"let g:syntastic_auto_loc_list=1
+""don't care about warnings
+"let g:syntastic_quiet_messages = {'level': 'warnings'}
+
+" Default to eslint. If you need jshint, you can override this in
+" " ~/.vimrc.after
+"let g:syntastic_javascript_checkers = ['eslint']
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+""let g:syntastic_check_on_wq = 0
+"
+"let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
+let g:ale_linters = {
+\   'javascript': ['prettier'],
+\}
+
+" run the current file
+nnoremap <leader>r :!clear; %:p<Enter>
