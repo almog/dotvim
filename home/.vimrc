@@ -59,9 +59,6 @@ set expandtab
 colorscheme solarized
 set background=dark
 
-" Save temp files to ~/tmp
-set dir=~/tmp	
-
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
