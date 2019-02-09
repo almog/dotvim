@@ -1,3 +1,7 @@
 # Installation
 
-`homesick clone almog/dotvim && homsick symlink dotvim`
+````
+$ homesick clone almog/dotvim && homsick symlink dotvim
+$ vim +PluginInstall +qall
+```
+
