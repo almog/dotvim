@@ -99,7 +99,7 @@ inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 
-nmap ,n :NERDTreeFind<CR>
+nmap ,n :NERDTreeToggle<CR>
 
 let mapleader = ","
 set re=1
