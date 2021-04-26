@@ -10,20 +10,12 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'elzr/vim-json'
 Plugin 'godlygeek/tabular'
-Plugin 'isRuslan/vim-es6'
-Plugin 'sbdchd/neoformat'
-" Plugin 'vim-syntastic/syntastic'
-Plugin 'w0rp/ale'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
 
@@ -105,40 +97,8 @@ let mapleader = ","
 set re=1
 set foldmethod=expr
 
-if $VIM_CRONTAB == "true"
-    set nobackup
-    set nowritebackup
-endif
-
-"autocmd BufWritePre *.js Neoformat
-"autocmd BufWritePre *.es6 Neoformat
-"autocmd BufWritePre *.jsx Neoformat
-
-"mark syntax errors with :signs
-"let g:syntastic_enable_signs=1
-""automatically jump to the error when saving the file
-"let g:syntastic_auto_jump=0
-"show the error list automatically
-"let g:syntastic_auto_loc_list=1
-""don't care about warnings
-"let g:syntastic_quiet_messages = {'level': 'warnings'}
-
-" Default to eslint. If you need jshint, you can override this in
-" " ~/.vimrc.after
-"let g:syntastic_javascript_checkers = ['eslint']
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-""let g:syntastic_check_on_wq = 0
-"
-"let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
-let g:ale_linters = {
-\   'javascript': ['prettier'],
-\}
+:set number relativenumber
+:set nu rnu
 
 " run the current file
 nnoremap <leader>r :!clear; %:p<Enter>
