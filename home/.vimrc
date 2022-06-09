@@ -47,6 +47,8 @@ syn on
 set autoindent
 set expandtab
 
+set showcmd " Show line/chars count under selection
+
 ""Color Scheme
 colorscheme solarized
 set background=dark
@@ -101,4 +103,9 @@ set foldmethod=expr
 :set nu rnu
 
 " run the current file
-nnoremap <leader>r :!clear; %:p<Enter>
+nnoremap <leader>r :!clear; DEBUG=1 %:p<Enter>
+"nnoremap <leader>p :w; !clear; DEBUG=1 python3 %:p<Enter>
+nnoremap <leader>p :w<CR>:!clear; DEBUG=1 python3 %<CR>
+
+" Repeat last ex command
+nnoremap <leader><leader> @:
