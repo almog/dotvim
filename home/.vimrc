@@ -108,3 +108,7 @@ nnoremap <leader>p :w<CR>:!clear; DEBUG=1 python3 %<CR>
 
 " Repeat last ex command
 nnoremap <leader><leader> @:
+
+" Enable mouse in Tmux (I use it for resizing windows):
+set ttymouse=xterm2
+set mouse=a
