@@ -112,3 +112,13 @@ nnoremap <leader><leader> @:
 " Enable mouse in Tmux (I use it for resizing windows):
 set ttymouse=xterm2
 set mouse=a
+
+" Windows managemant
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
+map <leader>w <C-w>w
+
+nnoremap <leader>\| :vsplit<CR>
+nnoremap <leader>- :split<CR>
