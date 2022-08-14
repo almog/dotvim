@@ -10,11 +10,10 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-repeat'
+"Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'godlygeek/tabular'
+"Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
